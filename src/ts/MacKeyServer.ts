@@ -128,7 +128,7 @@ export class MacKeyServer implements IGlobalKeyServer {
     /** Stop the Key server */
     public stop() {
         this.running = false;
-        this.proc.stdout.pause();
+        this.proc.stdout!.pause();
         this.proc.kill();
     }
 
